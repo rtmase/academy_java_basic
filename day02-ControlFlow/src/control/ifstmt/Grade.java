@@ -1,4 +1,4 @@
-package control;
+package control.ifstmt;
 
 import java.util.Scanner;
 
