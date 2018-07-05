@@ -18,6 +18,7 @@ public class NineNineTable {
 			}
 			System.out.println("");
 		}
+		
 	}
 }
 
