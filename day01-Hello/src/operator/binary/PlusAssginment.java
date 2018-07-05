@@ -13,19 +13,15 @@ public class PlusAssginment {
 		System.out.println("초기 num : "+ num); 	//0
 		
 		num += 1;
-		
 		System.out.println("num += : "+ num); 	//1
 		
 		num = num + 1;
-		
 		System.out.println("num = num + 1 : "+ num);	//2
 		
 		num += num + 1;
-		
 		System.out.println("num += num + 1 : "+ num);	//5
 		
 		num *= num * num;
-		
 		System.out.println("num *= num * num : "+ num);	//125
 	}
 }
