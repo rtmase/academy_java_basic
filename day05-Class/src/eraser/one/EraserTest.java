@@ -1,4 +1,4 @@
-package eraser;
+package eraser.one;
 
 public class EraserTest {
 	public static void main(String[] args) {

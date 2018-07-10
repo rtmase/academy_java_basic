@@ -1,4 +1,4 @@
-package eraser;
+package eraser.one;
 /**
  * 칠판 지우개를 정의하는 클래스
  * 
