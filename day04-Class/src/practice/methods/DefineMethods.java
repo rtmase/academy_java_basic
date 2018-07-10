@@ -7,7 +7,7 @@ public class DefineMethods {
 		sum= input;
 		for(i=0;i<10;i++){
 			System.out.println(sum);
-		sum=sum+10;
+			sum=sum+10;
 		}
 	}
 
@@ -76,7 +76,7 @@ public class DefineMethods {
 	public void printMsgManyTimes(String message,int input){
 		int i;
 		for(i=0;i<input;i++){
-		System.out.println(message);
+			System.out.println(message);
 		}
 	}
 
@@ -93,7 +93,7 @@ public class DefineMethods {
 			result = x / y;
 		else
 			System.err.println("error");
-		
+
 		System.out.printf("%d %s %d = %d%n",x,operator,y,result);
 	}
 
@@ -116,9 +116,9 @@ public class DefineMethods {
 	//15.
 	public boolean isEven(int input){
 		if(input%2==0)
-		return true;
+			return true;
 		else
-		return false;
+			return false;
 	}
 
 	//1.
@@ -134,8 +134,8 @@ public class DefineMethods {
 	public void findMultiple(int x){
 		int i;
 		for(i=1;i<100;i++){
-		if(x*i<100)
-		System.out.println(x*i);
+			if(x*i<100)
+				System.out.println(x*i);
 		}
 	}
 
@@ -143,11 +143,11 @@ public class DefineMethods {
 	public String decideSign (int x){
 		String str;
 		if(x>0)
-		str = "양의 정수";
+			str = "양의 정수";
 		else if(x==0)
-		str = "정수 0";
+			str = "정수 0";
 		else
-		str = "음의 정수";
+			str = "음의 정수";
 
 		return str;
 	}
@@ -162,14 +162,14 @@ public class DefineMethods {
 		for(i=0;i<str.length;i++){
 			System.out.println(str[i]);
 		}
-		
+
 	}
 
 	//5.
 	public double calcCircleArea (int r){
-		double won;
-		won = 3.14 *r *r;
-		return won;
+		double area;
+		area = 3.14 *r *r;
+		return area;
 	}
 
 	//6.
@@ -179,7 +179,7 @@ public class DefineMethods {
 		int[] numbers = new int[lengths];
 		for(i=1;i<numbers.length;i++){
 			if(x*i<100)
-			numbers[i] = x * i;
+				numbers[i] = x * i;
 		}
 		return numbers;
 	}
