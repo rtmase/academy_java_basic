@@ -43,7 +43,7 @@ public class Product {
 	 * 상태를 출력
 	 */
 	public void print() {
-		System.out.printf("상품 번호 : %s | 상품 이름 : %s | 가격 : %d | 재고 수량 : %d%n",prodCode, prodName, price, quantity);
+		System.out.printf("상품 번호 : %s | 상품 이름 : %s | 가격 : %,6d | 재고 수량 : %2d%n",prodCode, prodName, price, quantity);
 	}
 	
 	/**
