@@ -92,11 +92,9 @@ public class MapWarehouse implements GeneralWarehouse {
 	@Override
 	public List<Product> getAllProducts() {
 		Collection<Product> collection = products.values();
-		// Map 의 벨류들만 뽑아서 collection 형태로 저장
 		Product[] prodArr = new Product[collection.size()];
-		// collection의 사이즈 만큼의 배열 prodArr 를 생성
+		
 		return Arrays.asList(collection.toArray(prodArr));
-		// collection의 데이터를 배열 prodArr에 담아서 리스트화 시킴
 	}
 
 	// 제품이 이미 존재하는지 여부 확인

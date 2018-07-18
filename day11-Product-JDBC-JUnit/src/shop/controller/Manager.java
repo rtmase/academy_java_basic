@@ -6,6 +6,10 @@ import shop.dao.ArrayWarehouse;
 import shop.dao.GeneralWarehouse;
 import shop.exception.DuplicateException;
 import shop.exception.NotFoundException;
+import shop.view.ErrorReply;
+import shop.view.ListReply;
+import shop.view.MessageReply;
+import shop.view.ProductReply;
 import shop.view.Reply;
 import shop.vo.Product;
 
@@ -34,7 +38,7 @@ public class Manager {
 	
 	// 2. 생성자 선언
 	public Manager() {
-		//warehouse = new ArrayWarehouse();
+		warehouse = new ArrayWarehouse();
 		// 매니저가 창고를 짓는다....?
 		// 매니저의 역할이 벗어나는 코드...
 		// 논리적으로 맞지 않음

@@ -9,7 +9,8 @@ import java.util.Set;
 
 import shop.dao.ArrayWarehouse;
 import shop.dao.GeneralWarehouse;
-import shop.dao.JdbcWareHouse;
+import shop.dao.JdbcWarehouse;
+import shop.dao.JdbcWarehouse2;
 import shop.dao.ListWarehouse;
 import shop.dao.MapWarehouse;
 import shop.dao.SetWarehouse;
@@ -24,7 +25,7 @@ import shop.vo.Product;
 public class WarehouseFactory {
 	public static GeneralWarehouse getWarehouse(String type) {
 		GeneralWarehouse warehouse = null;
-		// Yoda 표기법
+		
 		if ("array".equals(type)) {
 			Product[] products = new Product[0];
 			warehouse = new ArrayWarehouse(products);
@@ -42,7 +43,10 @@ public class WarehouseFactory {
 			warehouse = new MapWarehouse(products);
 		}
 		else if ("jdbc".equals(type)) {
-			warehouse = new JdbcWareHouse();
+			warehouse = new JdbcWarehouse();
+		}
+		else if ("singleton".equals(type)) {
+			warehouse = JdbcWarehouse2.getInstance();
 		}
 		
 		return warehouse;
