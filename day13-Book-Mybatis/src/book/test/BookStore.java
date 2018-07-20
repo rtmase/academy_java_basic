@@ -1,20 +1,16 @@
 package book.test;
 
-import java.util.ArrayList;
-import java.util.List;
+import static book.factory.BookShelfFactory.getBooks;
 
 import book.controller.BookManager;
 import book.dao.BookShelf;
 import book.dao.JdbcBookShelf;
-import book.dao.ListBookShelf;
 import book.vo.Book;
 
 public class BookStore {
 	public static void main(String[] args) {
-		List<Book> book = new ArrayList<Book>();
-		
-//		BookShelf books = new JdbcBookShelf();
-		BookShelf books = new ListBookShelf(book);
+		/** mybatis, jdbc, list, set, map */
+		BookShelf books = getBooks("mybatis");
 		BookManager manager = new BookManager(books);
 		
 		Book History = new Book("B001" ,"역사의 역사", "유시민", 14400, "9788971998557", "돌배게");

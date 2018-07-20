@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- mybatis 에서 SQL 작성하는 문서 -->
+<mapper namespace="book.mapper.BookMapper">
+    <insert id="insert" parameterType="Book">
+        INSERT INTO book
+            ( bookid
+            , title
+            , author
+            , price
+            , isbn
+            , publish)
+        VALUES 
+            ( #{bookId}
+             ,#{title}
+             ,#{author}
+             ,#{price}
+             ,#{isbn}
+             ,#{publish} )
+    </insert>
+    
+    <update id="update" parameterType="Book">
+      UPDATE book b     
+         SET b.title = #{title}
+           , b.author = #{author}
+           , b.PRICE    = #{price}
+           , b.isbn = #{isbn}
+           , b.publish = #{publish}
+           , b.MODDATE  = sysdate
+       WHERE b.bookid = #{bookId}
+    </update>
+    
+    <delete id="deleteOne" parameterType="Book">
+        DELETE book b 
+         WHERE b.bookid = #{bookId}
+    </delete>
+    
+    <select id="selectOne" parameterType="Book"
+                           resultType="Book">
+      SELECT b.bookid
+           , b.title
+           , b.author   
+           , b.price
+           , b.isbn
+           , b.publish
+        FROM book b 
+       WHERE b.bookid = #{bookId}
+    </select>
+    <select id="selectAll" resultType="Book">
+        SELECT b.bookid
+             , b.title
+             , b.author
+             , b.price   
+             , b.isbn
+             , b.publish
+          FROM book b 
+    </select>
+    
+    <select id="findBook" parameterType="Book" 
+                          resultType="string">
+        SELECT b.bookid   
+          FROM book b    
+         WHERE b.bookid = #{bookId}
+    </select>
+    
+</mapper>  

@@ -36,7 +36,7 @@ public class Manager {
 	
 	// 2. 생성자 선언
 	public Manager() {
-		warehouse = new ArrayWarehouse();
+		//warehouse = new ArrayWarehouse();
 		// 매니저가 창고를 짓는다....?
 		// 매니저의 역할이 벗어나는 코드...
 		// 논리적으로 맞지 않음
